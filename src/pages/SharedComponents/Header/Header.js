@@ -1,8 +1,14 @@
 import React, { Fragment } from "react";
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import useFirebase from "../../../hooks/useFirebase";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const { user, loading, logOut } = useFirebase();
+  const handleLogOut = () => {
+    logOut();
+  };
   return (
     <header>
       <Disclosure as="nav" className="shadow-md">
@@ -50,7 +56,36 @@ const Header = () => {
                 {/* Navbar Right Side */}
                 <div className="flex items-center pr-2  sm:ml-6 sm:pr-0 space-x-3 text-gray-300">
                   {/* User Name */}
-                  <span className="text-yellow-500 font-medium">Hi! Jana</span>
+                  <div className="flex items-center pr-2 sm:ml-6 sm:pr-0 space-x-4">
+                    {user?.email ? (
+                      <div className="space-x-4 flex items-center">
+                        <span className="text-orange-600 text-xl  border-b-2 border-transparent">
+                          Welcome, {user?.displayName} !
+                        </span>
+                        <NavLink
+                          className="text-orange-600 text-xl  border-b-2 border-transparent hover:text-gray-200"
+                          activeClassName=" border-white"
+                          to="/dashboard"
+                        >
+                          DashBoard
+                        </NavLink>
+                        <button
+                          onClick={handleLogOut}
+                          className="px-4 py-2 bg-white text-red-600 font-medium rounded-full"
+                        >
+                          Logout
+                        </button>
+                      </div>
+                    ) : (
+                      <NavLink
+                        className="text-orange-600 text-xl border-b-2 border-transparent hover:text-orange-400"
+                        activeClassName=" border-orange"
+                        to="/login"
+                      >
+                        Login
+                      </NavLink>
+                    )}
+                  </div>
                   {/* <HeaderCart /> */}
 
                   {/* cart menu */}
