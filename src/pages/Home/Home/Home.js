@@ -1,7 +1,8 @@
 import React from "react";
+import Header from "../../SharedComponents/Header/Header";
 
 const Home = () => {
-  return <div className="text-2xl text-teal-600">Home page</div>;
+  return <Header />;
 };
 
 export default Home;
