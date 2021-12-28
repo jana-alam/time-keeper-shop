@@ -69,9 +69,9 @@ const Header = () => {
                         <NavLink
                           className="text-orange-600 text-xl  border-b-2 border-transparent hover:text-gray-200"
                           activeclassname=" border-white"
-                          to="/dashboard"
+                          to="/myOrders"
                         >
-                          DashBoard
+                          MyOrders
                         </NavLink>
                         <div
                           className="relative cursor-pointer"

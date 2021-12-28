@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
 import Spinner from "../../SharedComponents/Spinner/Spinner";
+import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 
 const ShippingAddress = () => {
   const { user, setCart, loading } = useAuth();
@@ -10,6 +12,7 @@ const ShippingAddress = () => {
     email: user?.email,
   });
   const [shipping, setShipping] = useState({});
+  const navigate = useNavigate();
   const handleShippingInput = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -31,9 +34,31 @@ const ShippingAddress = () => {
       ...userInfo,
       ...shipping,
     };
-    alert("completed");
-    e.target.reset();
-    setCart([]);
+
+    fetch(" http://localhost:5000/order", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(orderDetails),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          swal({
+            title: "Congrats!",
+            text: "Your order is confirmed!",
+            icon: "success",
+            button: "Ok!",
+          });
+          e.target.reset();
+          setCart([]);
+          navigate("/shop");
+        }
+      })
+      .catch((error) => {
+        e.target.reset();
+      });
   };
   if (loading) {
     return <Spinner />;
@@ -56,7 +81,7 @@ const ShippingAddress = () => {
                   onChange={handleUserInfo}
                   type="text"
                   name="name"
-                  value={user?.disPlayName || ""}
+                  value={userInfo?.name || ""}
                   placeholder="Your Name"
                   className="p-2 mt-1 block w-full shadow-sm sm:text-sm border-b-2 border-gray-300"
                 />
