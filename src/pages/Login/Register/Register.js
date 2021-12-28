@@ -4,7 +4,8 @@ import useAuth from "../../../hooks/useAuth";
 import Spinner from "../../SharedComponents/Spinner/Spinner";
 
 const Register = () => {
-  const { loading, registerUser } = useAuth();
+  const { value } = useAuth();
+  const { loading, registerUser } = value;
   const [registerInfo, setRegisterInfo] = useState({});
 
   const navigate = useNavigate();

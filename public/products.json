@@ -2,7 +2,7 @@
   {
     "_id": "61ca5fea6de6e383978e3d68",
     "index": 0,
-    "price": "$149.49",
+    "price": 149.49,
     "picture": "https://i.ibb.co/S694Gfx/Tudor-Tudor-Royal-28600-0005.jpg",
     "brand": "TUDOR",
     "name": "Royal Automatic Blue"
@@ -10,7 +10,7 @@
   {
     "_id": "61ca5fea007e182b3b75943f",
     "index": 1,
-    "price": "$384.05",
+    "price": 384.05,
     "picture": "https://i.ibb.co/7v6qhD8/Tudor-Prince-Date-Day-74033-0013.jpg",
     "brand": "TUDOR",
     "name": "Prince Date Day"
@@ -18,7 +18,7 @@
   {
     "_id": "61ca5fea17a1c680e0463adb",
     "index": 2,
-    "price": "$156.24",
+    "price": 156.24,
     "picture": "https://i.ibb.co/N7HMHsm/TAG-Heuer-WAZ1110-FT8023.jpg",
     "brand": "TUDOR",
     "name": "Prince Oysterdate Automatic"
@@ -26,7 +26,7 @@
   {
     "_id": "61ca5feae74fa26c92580360",
     "index": 3,
-    "price": "$209.77",
+    "price": 209.77,
     "picture": "https://i.ibb.co/85h4fWL/Tudor-Prince-Date-Day-74033-0009.jpg",
     "brand": "TUDOR",
     "name": "Prince Diamond Watch"
@@ -42,7 +42,7 @@
   {
     "_id": "61ca5feaa84077facaa0f31c",
     "index": 5,
-    "price": "$116.23",
+    "price": 116.23,
     "picture": "https://i.ibb.co/Xk3YV7H/TAG-Heuer-CAZ1010-FT8024.jpg",
     "brand": "ROLEX",
     "name": "Submariner Bay"
@@ -50,7 +50,7 @@
   {
     "_id": "61ca5feaf6580ae7878a0598",
     "index": 6,
-    "price": "$175.98",
+    "price": 175.98,
     "picture": "https://i.ibb.co/Dt4QtR1/Omega-329-33-44-51-04-001.jpg",
     "brand": "ROLEX",
     "name": "Magisess Roller"
@@ -58,7 +58,7 @@
   {
     "_id": "61ca5fea86e8613f4e3ae37f",
     "index": 7,
-    "price": "$368.89",
+    "price": 368.89,
     "picture": "https://i.ibb.co/qrkF83V/Hublot-301-SX-7170-LR.jpg",
     "brand": "ROLEX",
     "name": "GMT Master II"
@@ -66,7 +66,7 @@
   {
     "_id": "61ca5feacddcca698b792dc6",
     "index": 8,
-    "price": "$360.20",
+    "price": 360.20,
     "picture": "https://i.ibb.co/d0Zjqk2/57784-0-sa197892-ts51347629.jpg",
     "brand": "OMEGA",
     "name": "Munoz Stell"
@@ -74,7 +74,7 @@
   {
     "_id": "61ca5fea1b6801732cf6ff81",
     "index": 9,
-    "price": "$345.81",
+    "price": 345.81,
     "picture": "https://i.ibb.co/dMqwH8b/43894-0-sa198292-ts51343817.jpg",
     "brand": "OMEGA",
     "name": "Calderon Automatic"
@@ -82,7 +82,7 @@
   {
     "_id": "61ca5feaa5d9002f5c0eb77a",
     "index": 10,
-    "price": "$300.88",
+    "price": 300.88,
     "picture": "https://i.ibb.co/wgBKkzC/43892-0-sa203296-ts51343787.jpg",
     "brand": "OMEAGA",
     "name": "Banks River"
@@ -90,7 +90,7 @@
   {
     "_id": "61ca5fea01a79e346f9b3418",
     "index": 11,
-    "price": "$112.29",
+    "price": 112.29,
     "picture": "https://i.ibb.co/47k1CrQ/37102-0-sa197762-ts51343343.jpg",
     "brand": "OMEGA",
     "name": "Morales High Tower"

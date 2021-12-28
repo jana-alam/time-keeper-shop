@@ -57,8 +57,8 @@ const useFirebase = () => {
     setLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const redirectedUrl = location?.state?.from || "/home";
-        navigate(redirectedUrl);
+        let from = location.state?.from?.pathname || "/";
+        navigate(from, { replace: true });
       })
       .catch((error) => console.log(error.message))
       .finally(() => {

@@ -4,7 +4,8 @@ import Spinner from "../../SharedComponents/Spinner/Spinner";
 import useAuth from "../../../hooks/useAuth";
 
 const Login = () => {
-  const { loading, loginUser } = useAuth();
+  const { value } = useAuth();
+  const { loading, loginUser } = value;
   const [loginInfo, setLoginInfo] = useState({});
 
   const location = useLocation();
