@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import useFirebase from "../../../hooks/useFirebase";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
-  const { user, loading, logOut } = useFirebase();
+  const { user, logOut } = useAuth();
   const handleLogOut = () => {
     logOut();
   };
@@ -40,16 +40,16 @@ const Header = () => {
                       {/* Navigation menu on large device */}
                       <a
                         href="#home"
-                        className=" hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-lg font-medium text-gray-800"
+                        className=" hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-lg font-medium text-gray-800"
                       >
                         Home
                       </a>
-                      <a
-                        href="#shop"
-                        className="hover:bg-yellow-500 hover:text-white px-3 py-2 rounded-md text-lg font-medium text-gray-800"
+                      <NavLink
+                        to={"/shop"}
+                        className="hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-lg font-medium text-gray-800"
                       >
                         Shop
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@ const Header = () => {
                         </span>
                         <NavLink
                           className="text-orange-600 text-xl  border-b-2 border-transparent hover:text-gray-200"
-                          activeClassName=" border-white"
+                          activeclassname=" border-white"
                           to="/dashboard"
                         >
                           DashBoard
@@ -79,7 +79,7 @@ const Header = () => {
                     ) : (
                       <NavLink
                         className="text-orange-600 text-xl border-b-2 border-transparent hover:text-orange-400"
-                        activeClassName=" border-orange"
+                        activeclassname="border-orange"
                         to="/login"
                       >
                         Login

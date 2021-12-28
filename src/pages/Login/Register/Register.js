@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import useFirebase from "../../../hooks/useFirebase";
+import { NavLink, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import Spinner from "../../SharedComponents/Spinner/Spinner";
 
 const Register = () => {
-  const { loading, registerUser } = useFirebase();
+  const { loading, registerUser } = useAuth();
   const [registerInfo, setRegisterInfo] = useState({});
 
   const navigate = useNavigate();
