@@ -3,11 +3,17 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
 import useAuth from "../../../hooks/useAuth";
 import CartItem from "../CartItem/CartItem";
+import { useNavigate } from "react-router-dom";
 
-export default function Cart() {
+const Cart = () => {
   const { open, setOpen, cart, setCart } = useAuth();
   const [totalAmount, setTotalAmount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const navigate = useNavigate();
+  const handleCheckOut = () => {
+    navigate("/shipping");
+    setOpen(false);
+  };
 
   useEffect(() => {
     const updatedAmount = cart.reduce((a, b) => a + b.quantity, 0);
@@ -133,9 +139,11 @@ export default function Cart() {
                                   <p>Total Price:</p>
                                   <p>$ {totalPrice}</p>
                                 </div>
-                                <button className="w-full bg-orange-500 p-2 text-white font-medium rounded-lg">
+                                <button
+                                  onClick={handleCheckOut}
+                                  className="w-full bg-orange-500 p-2 text-white font-medium rounded-lg"
+                                >
                                   Proceed To Check Out
-                                  <p></p>
                                 </button>
                               </div>
                             </>
@@ -164,4 +172,6 @@ export default function Cart() {
       </Dialog>
     </Transition.Root>
   );
-}
+};
+
+export default Cart;

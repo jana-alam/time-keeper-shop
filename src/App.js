@@ -5,6 +5,7 @@ import Register from "./pages/Login/Register/Register";
 import RequireAuth from "./pages/Login/RequireAuth/RequireAuth";
 import AuthProvider from "./pages/SharedComponents/AuthProvider/AuthProvider";
 import Cart from "./pages/SharedComponents/Cart/Cart";
+import Shipping from "./pages/Shipping/Shipping/Shipping";
 import Shop from "./pages/Shop/Shop/Shop";
 
 function App() {
@@ -25,9 +26,17 @@ function App() {
                 </RequireAuth>
               }
             ></Route>
+            <Route
+              path="/shipping"
+              element={
+                <RequireAuth>
+                  <Shipping />
+                </RequireAuth>
+              }
+            ></Route>
           </Routes>
+          <Cart />
         </BrowserRouter>
-        <Cart />
       </AuthProvider>
     </div>
   );
