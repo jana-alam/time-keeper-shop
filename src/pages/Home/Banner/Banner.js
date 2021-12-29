@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Banner = () => {
   const bannerStyle = {
@@ -13,9 +14,11 @@ const Banner = () => {
             Time Waits For{" "}
             <span className="underline text-orange-600">No Body</span>
           </h1>
-          <button className="mt-6 px-6 py-4 bg-orange-700 text-white text-lg font-medium rounded hover:bg-orange-500 focus:outline-none focus:bg-orange-500">
-            Explore
-          </button>
+          <NavLink to="/shop">
+            <button className="mt-6 px-6 py-4 bg-orange-700 text-white text-lg font-medium rounded hover:bg-orange-500 focus:outline-none focus:bg-orange-500">
+              Explore
+            </button>
+          </NavLink>
         </div>
       </div>
     </div>
