@@ -35,7 +35,7 @@ const ShippingAddress = () => {
       ...shipping,
     };
 
-    fetch(" http://localhost:5000/order", {
+    fetch(" https://murmuring-island-45874.herokuapp.com/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",
